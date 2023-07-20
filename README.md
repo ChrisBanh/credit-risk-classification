@@ -1,28 +1,26 @@
 # Credit-Risk Classification Analysis
 
-This is about evaluating and training a model based on loan risk. With a dataset of previous lending activity from a peer-to-peer lending service company that can be used to identitfy the credit worthiness of a borrower.
+This is about evaluating and training a model based on loan risk. With a dataset of previous lending activity from a peer-to-peer lending service company that can be used to identitfy the credit worthiness of a borrower. Lenders allow users to borrow money with the expectation of the user to return the amount borrowed in the first place.
 
 
 
 ## Overview of the Analysis
 
 
-
-
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+* As stated this analysis trains a model that determines the credit worthiness of buyer.
+* The historical data used to train the model and ultimately evaluate the model contains over 70000 peer-to-peer entries.
+* The values within this model that we are attempting to predict is the y value which is in this case the "loan_status". We want to determine if the loan is deemed "healthy" or "high risk". The other values used within this analysis are interest rates, borrower income, debt_to_income ratio, number of accounts and derogatory marks. 
+* The first key step was to split the data into training and testing dataset, from then we assign the variables. Then we used the split data from the original dataset to create a logitic regression model. 
+* "Train_test_split" was used to divide the original data into training and testing variables. The training data was then fitted into the model using "logisticregression". Finally to evaluate the model's performance a confusion matrix was performed and a classification report was printed. 
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
+
 
 * Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+  * This model utilises the original data provided within a csv file. 0 is indicated for healthy loan and 1 is for "high risk". The precision of 1.00 (aka 100%) for the healthy loan indicates a great degree of accuracy but this is lower for high risk loans with a score of 0.86 (86%) precision. 
+  * Recall values still favour healthy loans with a value of 0.99 which is still very accurate. The recall accuracy for high risk is slightly better than the high risk precision with a value of 0.91.  
+  * The macro average evaluates to 92% for overall precision and 95% for recall 
 
 
 
@@ -30,8 +28,6 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 ## Summary
 
-Summarise the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+Through this it deems to be more accurate to monitor the `0`'s within this analysis as there is more false negatives when solely accounting only the `1`'s. Since only 1 model was used and evaluated, no comment can be made on the preferential use of a model, however there may be more viable models instead of solely applying the linear regression to the original data.
 
-If you do not recommend any of the models, please justify your reasoning.
+
