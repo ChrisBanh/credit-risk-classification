@@ -30,4 +30,6 @@ This is about evaluating and training a model based on loan risk. With a dataset
 
 Through this it deems to be more accurate to monitor the `0`'s within this analysis as there is more false negatives when solely accounting only the `1`'s. Since only 1 model was used and evaluated, no comment can be made on the preferential use of a model, however there may be more viable models instead of solely applying the linear regression to the original data.
 
+No comment can also be made on whether or not to recommend this model for use by a company solely on the basis that one model was evaluated. Multiple models needs to be tested before recommendation can be made.
+
 
